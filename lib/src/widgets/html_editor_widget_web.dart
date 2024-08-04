@@ -1,15 +1,15 @@
-export 'dart:html';
-
 import 'dart:convert';
+// ignore: avoid_web_libraries_in_flutter
+import 'dart:html' as html;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:html_editor_enhanced/html_editor.dart';
-import 'package:html_editor_enhanced/utils/utils.dart';
-// ignore: avoid_web_libraries_in_flutter
-import 'dart:html' as html;
 import 'package:html_editor_enhanced/utils/shims/dart_ui.dart' as ui;
+import 'package:html_editor_enhanced/utils/utils.dart';
+
+export 'dart:html';
 
 /// The HTML Editor widget itself, for web (uses IFrameElement)
 class HtmlEditorWidget extends StatefulWidget {
@@ -218,17 +218,28 @@ class _HtmlEditorWidgetWebState extends State<HtmlEditorWidget> {
             ${widget.htmlEditorOptions.customOptions}
             $summernoteCallbacks
           });
-          
+
           \$('#summernote-2').on('summernote.change', function(_, contents, \$editable) {
             window.parent.postMessage(JSON.stringify({"view": "$createdViewId", "type": "toDart: onChangeContent", "contents": contents}), "*");
           });
-        });
-       
+
+     
+      // Add border and border radius to the editable area
+      \$('.note-editable').css({
+         'border': '1px solid rgba(0, 0, 0, 0.2)',
+         'border-bottom': '1px solid #919191',  
+         'border-right': '1px solid #919191',
+         'border-left': '1px solid #919191',
+         'border-radius': '0 0 12px 12px' 
+      });
+    });
+
         window.parent.addEventListener('message', handleMessage, false);
         document.onselectionchange = onSelectionChange;
         console.log('done');
-      
+
         function handleMessage(e) {
+   
           if (e && e.data && e.data.includes("toIframe:")) {
             var data = JSON.parse(e.data);
             if (data["view"].includes("$createdViewId")) {

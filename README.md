@@ -1133,3 +1133,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 > Meanwhile, PRs are always welcome
 
 Original html_editor by [xrb21](https://github.com/xrb21) - [repo link](https://github.com/xrb21/flutter-html-editor). Credits for the original idea and original base code to him. This library is a fork of his repo.
+# enhanced-html-flutter

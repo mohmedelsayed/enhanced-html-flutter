@@ -46,21 +46,20 @@ class FontButtons extends Toolbar {
     this.superscript = true,
     this.subscript = true,
   });
-
   List<Icon> getIcons1() {
     var icons = <Icon>[];
-    if (bold) icons.add(Icon(Icons.format_bold));
-    if (italic) icons.add(Icon(Icons.format_italic));
-    if (underline) icons.add(Icon(Icons.format_underline));
-    if (clearAll) icons.add(Icon(Icons.format_clear));
+    if (bold) icons.add(Icon(Icons.format_bold, size: 20));
+    if (italic) icons.add(Icon(Icons.format_italic, size: 20));
+    if (underline) icons.add(Icon(Icons.format_underline, size: 20));
+    if (clearAll) icons.add(Icon(Icons.format_clear, size: 20));
     return icons;
   }
 
   List<Icon> getIcons2() {
     var icons = <Icon>[];
-    if (strikethrough) icons.add(Icon(Icons.format_strikethrough));
-    if (superscript) icons.add(Icon(Icons.superscript));
-    if (subscript) icons.add(Icon(Icons.subscript));
+    if (strikethrough) icons.add(Icon(Icons.format_strikethrough, size: 20));
+    if (superscript) icons.add(Icon(Icons.superscript, size: 20));
+    if (subscript) icons.add(Icon(Icons.subscript, size: 20));
     return icons;
   }
 }
@@ -77,8 +76,8 @@ class ColorButtons extends Toolbar {
 
   List<Icon> getIcons() {
     var icons = <Icon>[];
-    if (foregroundColor) icons.add(Icon(Icons.format_color_text));
-    if (highlightColor) icons.add(Icon(Icons.format_color_fill));
+    if (foregroundColor) icons.add(Icon(Icons.format_color_text, size: 20));
+    if (highlightColor) icons.add(Icon(Icons.format_color_fill, size: 20));
     return icons;
   }
 }
@@ -97,8 +96,8 @@ class ListButtons extends Toolbar {
 
   List<Icon> getIcons() {
     var icons = <Icon>[];
-    if (ul) icons.add(Icon(Icons.format_list_bulleted));
-    if (ol) icons.add(Icon(Icons.format_list_numbered));
+    if (ul) icons.add(Icon(Icons.format_list_bulleted, size: 20));
+    if (ol) icons.add(Icon(Icons.format_list_numbered, size: 20));
     return icons;
   }
 }
@@ -129,17 +128,17 @@ class ParagraphButtons extends Toolbar {
 
   List<Icon> getIcons1() {
     var icons = <Icon>[];
-    if (alignLeft) icons.add(Icon(Icons.format_align_left));
-    if (alignCenter) icons.add(Icon(Icons.format_align_center));
-    if (alignRight) icons.add(Icon(Icons.format_align_right));
-    if (alignJustify) icons.add(Icon(Icons.format_align_justify));
+    if (alignLeft) icons.add(Icon(Icons.format_align_left, size: 20));
+    if (alignCenter) icons.add(Icon(Icons.format_align_center, size: 20));
+    if (alignRight) icons.add(Icon(Icons.format_align_right, size: 20));
+    if (alignJustify) icons.add(Icon(Icons.format_align_justify, size: 20));
     return icons;
   }
 
   List<Icon> getIcons2() {
     var icons = <Icon>[];
-    if (increaseIndent) icons.add(Icon(Icons.format_indent_increase));
-    if (decreaseIndent) icons.add(Icon(Icons.format_indent_decrease));
+    if (increaseIndent) icons.add(Icon(Icons.format_indent_increase, size: 20));
+    if (decreaseIndent) icons.add(Icon(Icons.format_indent_decrease, size: 20));
     return icons;
   }
 }
@@ -166,13 +165,13 @@ class InsertButtons extends Toolbar {
 
   List<Icon> getIcons() {
     var icons = <Icon>[];
-    if (link) icons.add(Icon(Icons.link));
-    if (picture) icons.add(Icon(Icons.image_outlined));
-    if (audio) icons.add(Icon(Icons.audiotrack_outlined));
-    if (video) icons.add(Icon(Icons.videocam_outlined));
-    if (otherFile) icons.add(Icon(Icons.attach_file));
-    if (table) icons.add(Icon(Icons.table_chart_outlined));
-    if (hr) icons.add(Icon(Icons.horizontal_rule));
+    if (link) icons.add(Icon(Icons.link, size: 20));
+    if (picture) icons.add(Icon(Icons.image_outlined, size: 20));
+    if (audio) icons.add(Icon(Icons.audiotrack_outlined, size: 20));
+    if (video) icons.add(Icon(Icons.videocam_outlined, size: 20));
+    if (otherFile) icons.add(Icon(Icons.attach_file, size: 20));
+    if (table) icons.add(Icon(Icons.table_chart_outlined, size: 20));
+    if (hr) icons.add(Icon(Icons.horizontal_rule, size: 20));
     return icons;
   }
 }
@@ -199,18 +198,18 @@ class OtherButtons extends Toolbar {
 
   List<Icon> getIcons1() {
     var icons = <Icon>[];
-    if (fullscreen) icons.add(Icon(Icons.fullscreen));
-    if (codeview) icons.add(Icon(Icons.code));
-    if (undo) icons.add(Icon(Icons.undo));
-    if (redo) icons.add(Icon(Icons.redo));
-    if (help) icons.add(Icon(Icons.help_outline));
+    if (fullscreen) icons.add(Icon(Icons.fullscreen, size: 20));
+    if (codeview) icons.add(Icon(Icons.code, size: 20));
+    if (undo) icons.add(Icon(Icons.undo, size: 20));
+    if (redo) icons.add(Icon(Icons.redo, size: 20));
+    if (help) icons.add(Icon(Icons.help_outline, size: 20));
     return icons;
   }
 
   List<Icon> getIcons2() {
     var icons = <Icon>[];
-    if (copy) icons.add(Icon(Icons.copy));
-    if (paste) icons.add(Icon(Icons.paste));
+    if (copy) icons.add(Icon(Icons.copy, size: 20));
+    if (paste) icons.add(Icon(Icons.paste, size: 20));
     return icons;
   }
 }

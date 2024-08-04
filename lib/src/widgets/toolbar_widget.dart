@@ -346,6 +346,7 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
           ),
         ),
       );
+      //NOTE: HERE SAYED WORK
     } else if (widget.htmlToolbarOptions.toolbarType ==
         ToolbarType.nativeScrollable) {
       return PointerInterceptor(
@@ -354,6 +355,26 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
           child: Opacity(
             opacity: _enabled ? 1 : 0.5,
             child: Container(
+              decoration: BoxDecoration(
+                border: Border(
+                  top: BorderSide(
+                    color: Color(0xFF919191),
+                    width: 1.0,
+                  ),
+                  right: BorderSide(
+                    color: Color(0xFF919191),
+                    width: 1.0,
+                  ),
+                  left: BorderSide(
+                    color: Color(0xFF919191),
+                    width: 1.0,
+                  ),
+                ),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(12),
+                  topRight: Radius.circular(12),
+                ),
+              ),
               height: widget.htmlToolbarOptions.toolbarItemHeight + 15,
               child: Padding(
                 padding: const EdgeInsets.all(5.0),
@@ -363,7 +384,7 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
                     SliverFillRemaining(
                       hasScrollBody: false,
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: _buildChildren(),
                       ),
                     ),
@@ -1120,7 +1141,8 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
                               newColor = color;
                             },
                             title: Text('Choose a Color',
-                                style: Theme.of(context).textTheme.headlineSmall),
+                                style:
+                                    Theme.of(context).textTheme.headlineSmall),
                             width: 40,
                             height: 40,
                             spacing: 0,
